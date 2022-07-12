@@ -1,0 +1,141 @@
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("Helvetica Neue Regular");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("Helvetica Neue Regular");
+  font-weight: 200;
+}
+
+html>body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Verdana, sans-serif;
+  font-size: 14px;													
+  font-weight: 400;
+  background-color: #FAFAFA;
+  background-image: url(ba.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+@media (max-width: 1024px) {
+  html>body {
+    background-size: contain;
+  }
+}
+/* IE10以上 */
+@media all and (-ms-high-contrast: none) {
+  body {
+    font-family: Verdana, Meiryo, sans-serif;
+  }
+}
+/* ***** Common  **************************************************************/
+.mdl-button {
+  text-transform: none;
+  color: #757575;
+  font-family: inherit;
+}
+.valign-middle {
+  vertical-align: middle;
+}
+/* ***** Menu *****************************************************************/
+.mdl-layout__header-row {
+  padding: 0;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.portfolio-logo-row {
+  min-height: 200px;
+}
+.portfolio-logo {
+  background: url(./jtdc.png) 30% no-repeat;
+  background-size: cover;
+  height: 61.2px;
+  width: 195.6px;
+  margin: auto auto 10px;
+}
+.is-compact .portfolio-logo {
+  height: 51px;
+  width: 163px;
+  margin-top: 7px;
+}
+/* ***** Panel Common *********************************************************/
+.panel {
+  box-sizing: border-box;
+  width: 100%;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1
+}
+.panel-404_photo {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 40px;
+  width: auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/* ***** Panel Title **********************************************************/
+.subtitle {
+  font-family: Roboto, Helvetica, Arial, sans-serif; 
+  font-size: 60px;
+  font-weight: 400;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  padding: 0px;
+  line-height: 120px;
+  color: rgb(3, 169, 244); 
+}
+@media (max-width: 839px) {
+  .subtitle {
+    margin-top: 25px;
+    margin-bottom: 60px;
+    font-size: 28px;
+  }
+}
+.subtitle > .bold {
+  font-weight: 700;
+}
+/* ***** footer   *************************************************************/
+.docs-footer.mdl-mini-footer {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  -ms-grid-row-align: stretch;
+  align-items: stretch;
+  height: 52px
+}
+.docs-footer.mdl-mini-footer, .docs-footer.mdl-mini-footer ul {
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  list-style-type: none;
+}
+.docs-footer.mdl-mini-footer ul {
+  padding: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+
