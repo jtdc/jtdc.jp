@@ -65,10 +65,10 @@ $('#contactus-form').submit(function(event) {
         dataType: "json",
         success: function(json_data) {
             // JSON Arrayの先頭が成功フラグ、失敗の場合2番目がエラーメッセージ
-            if (!json_data[0]) {
-                $("#contactus-message").html("申し訳ございません。お問合せの受付に失敗しました。<br /><br />時間をおいて再度お試しいただくか、<a href='mailto:staff@jtdc.jp'>staff@jtdc.jp</a>までメールにてお問い合わせいただけますよう、お願い致します。")
-                return;
-            }
+            // if (!json_data[0]) {
+            //     $("#contactus-message").html("申し訳ございません。お問合せの受付に失敗しました。<br /><br />時間をおいて再度お試しいただくか、<a href='mailto:staff@jtdc.jp'>staff@jtdc.jp</a>までメールにてお問い合わせいただけますよう、お願い致します。")
+            //     return;
+            // }
             // 成功時処理
             $("#contactus-message").text("お問合せありがとうございました。")
         },
