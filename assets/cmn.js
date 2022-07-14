@@ -70,7 +70,12 @@ $('#contactus-form').submit(function(event) {
             //     return;
             // }
             // 成功時処理
-            $("#contactus-message").text("お問合せありがとうございました。")
+            console.log(json_data)
+            if (json_data.status == "OK") {
+              $("#contactus-message").text("お問合せありがとうございました。")
+            } else {
+              $("#contactus-message").html("申し訳ございません。お問合せの受付に失敗しました。<br /><br />時間をおいて再度お試しいただくか、<a href='mailto:staff@jtdc.jp'>staff@jtdc.jp</a>までメールにてお問い合わせいただけますよう、お願い致します。(status: NG)")
+            }
         },
         error: function() {
             // alert("Server Error. Pleasy try again later. \n" + JSON.stringify(data));
