@@ -59,7 +59,7 @@ $('#contactus-form').submit(function(event) {
     };
     $.ajax({
         type: "post",
-        url: "./apps/contact.php",
+        url: "https://izg5ff5g06.execute-api.ap-southeast-1.amazonaws.com/default/CorpSiteContact_to_Slack",
         data: JSON.stringify(data),
         contentType: 'application/json',
         dataType: "json",
