@@ -1,3 +1,3 @@
 # jtdc.jp
 
-![jtdc.jp](/logo.png)
+![jtdc.jp](/assets/jtdc.png)
