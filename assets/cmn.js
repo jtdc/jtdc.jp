@@ -59,28 +59,22 @@ $('#contactus-form').submit(function(event) {
     };
     $.ajax({
         type: "post",
-        url: "https://izg5ff5g06.execute-api.ap-southeast-1.amazonaws.com/default/CorpSiteContact_to_Slack",
-        // url: "https://notify-799155951562.us-west1.run.app",
+        // url: "https://izg5ff5g06.execute-api.ap-southeast-1.amazonaws.com/default/CorpSiteContact_to_Slack",
+        url: "https://notify-799155951562.us-west1.run.app",
         data: JSON.stringify(data),
         contentType: 'application/json',
         dataType: "json",
         success: function(json_data) {
-            // JSON Arrayの先頭が成功フラグ、失敗の場合2番目がエラーメッセージ
-            // if (!json_data[0]) {
-            //     $("#contactus-message").html("申し訳ございません。お問合せの受付に失敗しました。<br /><br />時間をおいて再度お試しいただくか、<a href='mailto:staff@jtdc.jp'>staff@jtdc.jp</a>までメールにてお問い合わせいただけますよう、お願い致します。")
-            //     return;
-            // }
-            // 成功時処理
             console.log(json_data)
             if (json_data && json_data.status == "OK") {
               $("#contactus-message").text("お問合せありがとうございました。")
             } else {
-              $("#contactus-message").html("申し訳ございません。お問合せの受付に失敗しました。<br /><br />時間をおいて再度お試しいただくか、<a href='mailto:staff@jtdc.jp'>staff@jtdc.jp</a>までメールにてお問い合わせいただけますよう、お願い致します。(status: NG)")
+              $("#contactus-message").html("申し訳ございません。お問合せの受付に失敗しました。<br />時間をおいて再度お試しいただくか、<a href='mailto:staff@jtdc.jp'>staff@jtdc.jp</a>までメールにてお問い合わせいただけますよう、お願い致します。(status: NG)")
             }
         },
         error: function() {
             // alert("Server Error. Pleasy try again later. \n" + JSON.stringify(data));
-            $("#contactus-message").html("申し訳ございません。お問合せの受付に失敗しました。<br /><br />時間をおいて再度お試しいただくか、<a href='mailto:staff@jtdc.jp'>staff@jtdc.jp</a>までメールにてお問い合わせいただけますよう、お願い致します。")
+            $("#contactus-message").html("申し訳ございません。お問合せの受付に失敗しました。<br />時間をおいて再度お試しいただくか、<a href='mailto:staff@jtdc.jp'>staff@jtdc.jp</a>までメールにてお問い合わせいただけますよう、お願い致します。")
         },
         complete: function() {      // 成功・失敗に関わらず通信が終了した際の処理
             button.attr("disabled", false);  // ボタンを再び enableにする
