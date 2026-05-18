@@ -59,7 +59,8 @@ $('#contactus-form').submit(function(event) {
     };
     $.ajax({
         type: "post",
-        url: "https://izg5ff5g06.execute-api.ap-southeast-1.amazonaws.com/default/CorpSiteContact_to_Slack",
+        // url: "https://izg5ff5g06.execute-api.ap-southeast-1.amazonaws.com/default/CorpSiteContact_to_Slack",
+        url: "https://notify-799155951562.us-west1.run.app",
         data: JSON.stringify(data),
         contentType: 'application/json',
         dataType: "json",
@@ -71,7 +72,7 @@ $('#contactus-form').submit(function(event) {
             // }
             // 成功時処理
             console.log(json_data)
-            if (json_data.status == "OK") {
+            if (json_data && json_data.status == "OK") {
               $("#contactus-message").text("お問合せありがとうございました。")
             } else {
               $("#contactus-message").html("申し訳ございません。お問合せの受付に失敗しました。<br /><br />時間をおいて再度お試しいただくか、<a href='mailto:staff@jtdc.jp'>staff@jtdc.jp</a>までメールにてお問い合わせいただけますよう、お願い致します。(status: NG)")
